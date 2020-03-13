@@ -27,7 +27,10 @@
   .el-header {
     padding: 0;
   }
-
+  .el-main {
+     padding: 5px;
+     background-color: fff;
+  }
   .el-aside {
     width: 230px !important;
   }

@@ -1,18 +1,11 @@
 <template>
   <el-header>
-    <div class="item">
+    <div class="header-item">
       <el-avatar shape="square" :src="squareUrl"></el-avatar>
     </div>
-    <div class="item">
-      <el-dropdown>
-        <i class="el-icon-setting" style="margin-right: 15px; "></i>
-        <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item>查看</el-dropdown-item>
-          <el-dropdown-item>新增</el-dropdown-item>
-          <el-dropdown-item>删除</el-dropdown-item>
-        </el-dropdown-menu>
-      </el-dropdown>
-      <span>王小虎</span>
+    <div class="header-item-right">
+      <span style="margin-right:10px">王小虎</span>
+      <el-button size="small" @click="logout">登出</el-button>
     </div>
   </el-header>
 </template>
@@ -21,26 +14,41 @@
 export default {
   data() {
     return {
-      squareUrl: "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3299138037,391931528&fm=26&gp=0.jpg"
+      squareUrl:
+        "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3299138037,391931528&fm=26&gp=0.jpg"
     };
+  },
+  methods:{
+    logout() {
+      this.$router.push("/login");
+    }
   }
 };
 </script>
 
-<style>
+<style lang="scss">
 .el-header {
   background-color: #1da7d1;
   color: #333;
   line-height: 60px;
   height: 60px;
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
-}
-.el-avatar {
-  margin-top: 10px;
-}
-.item {
-  padding: 0 10px;
-  text-align: right;
+
+  .header-item {
+    padding: 0 10px;
+  }
+  .header-item-right {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+  .el-avatar {
+    margin-top: 10px;
+  }
+  el-header .item {
+    padding: 0 10px;
+    text-align: right;
+  }
 }
 </style>

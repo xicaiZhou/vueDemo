@@ -45,8 +45,5 @@ export default {
 </script>
 
 <style>
-.el-aside {
-  color: rgb(93, 31, 192);
-  margin-top: 20px;
-}
+
 </style>
