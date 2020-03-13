@@ -28,11 +28,12 @@
     padding: 0;
   }
   .el-main {
-     padding: 5px;
-     background-color: fff;
+     padding: 10px;
+     border: 10px solid #E6E6E6;
   }
   .el-aside {
     width: 230px !important;
+    background-color: #545c64;
   }
 
   .el-footer {

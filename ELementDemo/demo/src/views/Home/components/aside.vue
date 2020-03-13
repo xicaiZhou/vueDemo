@@ -57,11 +57,8 @@ export default {
 </script>
 
 <style>
-.menu {
-  background-color: #545c64;
-  height: 100%;
+.menu{
+  width: 101%;
 }
-.el-submenu {
-  background-color: red;
-}
+
 </style>
